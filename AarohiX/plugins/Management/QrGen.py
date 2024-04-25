@@ -23,7 +23,7 @@ def generate_qr_code(text):
 
     return img_bytes
 
-@app.on_message(filters.command("qr")), ["/", "!", ".", ""]))
+@app.on_message(filters.command("qr")), prefixes["/", "!", ".", ""]))
 def qr_handler(client, message: Message):
     command_text = message.command
     if len(command_text) > 1:
