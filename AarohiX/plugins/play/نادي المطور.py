@@ -40,6 +40,6 @@ async def call_dev(client: Client, message: Message):
     # إنشاء زر "اونلاين"
     online_button = InlineKeyboardButton("< mixthon >", url=f"https://t.me/mixthon")
     
-    await message.reply_text(f"~ **تم إرسال النداء إلى مطور البوت\n\n-› Master -› @AA37A .",
+    await message.reply_text(f"~ **تم إرسال النداء إلى مطور البوت\n\n-› AA37A -› @AA37A .",
                              disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup([[online_button]]))
