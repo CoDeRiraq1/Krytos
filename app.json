@@ -1,5 +1,5 @@
 {
-    "name": "احدث نسخة من سورس فريدوم!!",
+    "name": "احدث نسخة من سورس ميكسثون !!",
     "description": " يمكنك تشغيل الملفات الصوتية في مباشرتا في القنوات والمجموعات .",
     "logo": "https://te.legra.ph/file/4807752a011965b771900.jpg",
     "keywords": [
@@ -52,7 +52,7 @@
       },
       "Muntazer": {
         "description": "~  ضع قناة الاشتراك الاجباري ( لاتنسى رفع البوت مشرف في القناة ) .",
-        "value": "xl444",
+        "value": "mixthon",
         "required": true
         
       },
@@ -98,7 +98,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "~  لاتغيرها أبدا .",
-        "value": "https://github.com/STKR2/RR8R9",
+        "value": "https://github.com/CoDeRiraq1/Krytos",
         "required": true
       }
     },
