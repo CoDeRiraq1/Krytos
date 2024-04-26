@@ -12,7 +12,7 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineK
 # ------------------------------------------------------------------------------- #
 
 
-@app.on_message(filters.command("pin") & admin_filter)
+@app.on_message(filters.command("تثبيت") & admin_filter)
 async def pin(_, message):
     replied = message.reply_to_message
     chat_title = message.chat.title
