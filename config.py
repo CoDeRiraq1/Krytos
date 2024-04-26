@@ -27,7 +27,7 @@ SONG_DOWNLOAD_DURATION = int(
 
 LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
-OWNER_ID = int(getenv("OWNER_ID", "1854384004"))
+OWNER_ID = int(getenv("OWNER_ID", "5539139939"))
 
 BOT_USERNAME = getenv("BOT_USERNAME" , "")
 
@@ -39,15 +39,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/STKR2/RR8R9",
+    "https://github.com/CoDeRiraq1/Krytos",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Xl444")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/vvyvv6")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/mixthon")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/V_64_V")
 
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "True")
@@ -70,7 +70,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 209715200000))
 
 
 # Get your pyrogram v2 session from @Shsusu_bot on Telegram
-STRING1 = getenv("STRING_SESSION", "AQBkY4p3iuvhDpb7EVoy9S3sEPtIgwcXupTLrYMn5fEhKKA1k2oyLDpaN_E4ft8vl46lMnOWIXIIsmtsAXjJtEHGmpsv8ONZxVlWODtImC3i-0Kklwb6vZVH348oncJiAFF-FnPiz5qqo3fJBYjeUhn6oNJ4aRB6MO6xAw5HyXfPSVnzOiMDGGKAUaMJv4nzzy1_OxNySl3eVFPicTVC1qgovq9ohY2ueAAF2zklzu3fwCnMqy2SDHEr33uXyvP2PF_K-ioZsKNQvjM5FAakjnmO0032V84ocEgRsPXcNdwALXym5u_ZAvYMTac6TnwGRM-PK8jE2Oj9w3DGU5S6uVzWAAAAAZytwEkA")
+STRING1 = getenv("STRING_SESSION", "AQE12AgAOtPcK6Bc625Ktk56MQbfZKHREo2e7ugeOl_fv_aL1iOikZAteWMGcGNu3a2_sxf9a1kIP18DKaC1IdY4h_aHYwWJizVYH67tbwcUr_ZL_nsQybqr9pZjwXPzFYkgPhu_IGM6_X6Nyxx0RMF7RtkQ3JEu7WoeoFtLCpt0GjcIWYC6b8PZlNsHaEb5EdDDPz6V93vM-hQnVD-3w_HYN8yDs-7sOY1OFrsXqrzhX7Hbi0jPjgiwT00f84d2G_5dIeSZpoYhMjfUOInjUZvDnJPEWzwwlntcPXKc5upE-Qqb9T8ktdtjOC_vQg0F05ZSgoDY4e4njlCBHnlpAlwoGlqd-gAAAAGqvkhZAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
