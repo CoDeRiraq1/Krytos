@@ -5,7 +5,7 @@ from AarohiX import app
 
 api = SafoneAPI()
 
-@app.on_message(filters.command(["bin", "ccbin", "bininfo"],
+@app.on_message(filters.command(["bin", "ccbin", "bininfo"], [".", "!", "/"]))
 async def check_ccbin(client, message):
     if len(message.command) < 2:
         return await message.reply_text(
