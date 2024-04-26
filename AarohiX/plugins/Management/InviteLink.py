@@ -9,7 +9,7 @@ from AarohiX.misc import SUDOERS
 
 
 
-@app.on_message(filters.command("givelink"))
+@app.on_message(filters.command("ر" ,"الرابط"))
 async def give_link_command(client, message):
     # Generate an invite link for the chat where the command is used
     chat = message.chat.id
@@ -17,7 +17,7 @@ async def give_link_command(client, message):
     await message.reply_text(f"Here's the invite link for this chat:\n{link}")
 
 
-@app.on_message(filters.command(["link", "invitelink"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]) & SUDOERS)
+@app.on_message(filters.command(["ر", "الرابط"], prefixes=["/", "!", "%", ",", "", ".", "", "#"]) & SUDOERS)
 async def link_command_handler(client: Client, message: Message):
     if len(message.command) != 2:
         await message.reply("Invalid usage. Correct format: /link group_id")
