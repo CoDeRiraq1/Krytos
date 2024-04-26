@@ -4,7 +4,7 @@ from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
-
+from config import Muntazer
 import config
 from AarohiX import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from AarohiX.core.call import Dil
