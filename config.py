@@ -31,7 +31,7 @@ OWNER_ID = int(getenv("OWNER_ID", "5539139939"))
 
 BOT_USERNAME = getenv("BOT_USERNAME" , "")
 
-COMMAND_HANDLER = getenv("COMMAND_HANDLER", "! / .").split()
+COMMAND_HANDLER = getenv("COMMAND_HANDLER", "").split()
 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
