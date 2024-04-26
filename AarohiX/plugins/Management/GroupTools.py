@@ -1,3 +1,4 @@
+#حقوق ابو عبيدة copyright 2024 mixthon 
 from pyrogram import enums
 from pyrogram.enums import ChatType
 from pyrogram import filters, Client
@@ -34,21 +35,21 @@ async def pin(_, message):
                 await message.reply_text(str(e))
 
 
-@app.on_message(filters.command("pinned"))
+@app.on_message(filters.command("تثبيت"))
 async def pinned(_, message):
     chat = await app.get_chat(message.chat.id)
     if not chat.pinned_message:
         return await message.reply_text("**ɴᴏ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ғᴏᴜɴᴅ**")
     try:        
         await message.reply_text("ʜᴇʀᴇ ɪs ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴘɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ",reply_markup=
-        InlineKeyboardMarkup([[InlineKeyboardButton(text="📝 ᴠɪᴇᴡ ᴍᴇssᴀɢᴇ",url=chat.pinned_message.link)]]))  
+        InlineKeyboardMarkup([[InlineKeyboardButton(text="📝 عرض الرسالة",url=chat.pinned_message.link)]]))  
     except Exception as er:
         await message.reply_text(er)
 
 
 # ------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("unpin") & admin_filter)
+@app.on_message(filters.command("الغاء تثبيت") & admin_filter)
 async def unpin(_, message):
     replied = message.reply_to_message
     chat_title = message.chat.title
@@ -74,7 +75,7 @@ async def unpin(_, message):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("removephoto") & admin_filter)
+@app.on_message(filters.command("حذف الصورة") & admin_filter)
 async def deletechatphoto(_, message):
       
       chat_id = message.chat.id
@@ -82,28 +83,28 @@ async def deletechatphoto(_, message):
       msg = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
       admin_check = await app.get_chat_member(chat_id, user_id)
       if message.chat.type == enums.ChatType.PRIVATE:
-           await msg.edit("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴ ɢʀᴏᴜᴘs !**") 
+           await msg.edit("**!**") 
       try:
          if admin_check.privileges.can_change_info:
              await app.delete_chat_photo(chat_id)
              await msg.edit("**sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴍᴏᴠᴇᴅ ᴘʀᴏғɪʟᴇ ᴘʜᴏᴛᴏ ғʀᴏᴍ ɢʀᴏᴜᴘ !\nʙʏ** {}".format(message.from_user.mention))    
       except:
-          await msg.edit("**ᴛʜᴇ ᴜsᴇʀ ᴍᴏsᴛ ɴᴇᴇᴅ ᴄʜᴀɴɢᴇ ɪɴғᴏ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴛᴏ ʀᴇᴍᴏᴠᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ !**")
+          await msg.edit("**انا احتاج الى صلاحية تغيير معلومات المجموعة   !**")
 
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command("setphoto")& admin_filter)
+@app.on_message(filters.command("وضع صورة")& admin_filter)
 async def setchatphoto(_, message):
       reply = message.reply_to_message
       chat_id = message.chat.id
       user_id = message.from_user.id
-      msg = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ...")
+      msg = await message.reply_text("يتم الوضع...")
       admin_check = await app.get_chat_member(chat_id, user_id)
       if message.chat.type == enums.ChatType.PRIVATE:
            await msg.edit("`ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴ ɢʀᴏᴜᴘs !`") 
       elif not reply:
-           await msg.edit("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴅᴏᴄᴜᴍᴇɴᴛ.**")
+           await msg.edit("**قم بعمل رد على الصورة لوضعها .**")
       elif reply:
           try:
              if admin_check.privileges.can_change_info:
@@ -114,7 +115,7 @@ async def setchatphoto(_, message):
                 await msg.edit("**sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ ᴛʀʏ ᴀɴᴏᴛʜᴇʀ ᴘʜᴏᴛᴏ !**")
      
           except:
-              await msg.edit("**ᴛʜᴇ ᴜsᴇʀ ᴍᴏsᴛ ɴᴇᴇᴅ ᴄʜᴀɴɢᴇ ɪɴғᴏ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ᴛᴏ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ᴘʜᴏᴛᴏ !**")
+              await msg.edit("** انا احتاج الى صلاحية تغيير معلومات المجموعة!**")
 
 
 # --------------------------------------------------------------------------------- #
@@ -155,12 +156,12 @@ async def setgrouptitle(_, message):
 
 
 
-@app.on_message(filters.command("setdiscription") & admin_filter)
+@app.on_message(filters.command("وضع وصف") & admin_filter)
 async def setg_discription(_, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
     user_id = message.from_user.id
-    msg = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ...**")
+    msg = await message.reply_text("**يتم  الوضع...**")
     if message.chat.type == enums.ChatType.PRIVATE:
         await msg.edit("**ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋs ᴏɴ ɢʀᴏᴜᴘs!**")
     elif reply:
