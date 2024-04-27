@@ -84,4 +84,4 @@ async def cutt(client: Client, message: Message):
          await message.reply(
 
 
-         f"{a}"
+         f"{a}")
