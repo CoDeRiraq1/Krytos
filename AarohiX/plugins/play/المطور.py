@@ -146,7 +146,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
     
-@app.on_callback_query(filters.regex("الرئيسية"))
+@app.on_callback_query(filters.regex("back"))
 async def mixthon_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
