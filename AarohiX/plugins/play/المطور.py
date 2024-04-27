@@ -172,19 +172,3 @@ async def mixthon_back(_, callback_query: CallbackQuery):
         ),
 
     )
-
-@app.on_message(
-    command(["المطور", "السورس", "المصنع"])
-)
-async def maker(client: Client, message: Message):
-    await message.reply_photo(
-        photo="https://graph.org/file/7308dda897f0cda0eafa3.jpg",
-        caption="~ Team Mixthon \n~ free Source @mixton ",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "- مطور البوت .", url=f"tg://openmessage?user_id={config.OWNER_ID}"
-                    ),
-                ],
-                [
