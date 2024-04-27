@@ -18,10 +18,10 @@ from pyrogram.errors import MessageNotModified
 @app.on_message(
     command("الاوامر")
 )
-async def mixthon_source(client: Client, message: Message):
+async def mixthon(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
-        caption=f"""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس mixthon \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇""",
+        caption=f"""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس mixthon \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**mixthon music**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -75,7 +75,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="mixthon_source"), 
+                        "رجوع", callback_data="back"), 
                     
                 ]
             ]
@@ -84,7 +84,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("ch"))
 async def mixthon_usage(_, callback_query: CallbackQuery):
-    await callback_query.answer(mixthon_source)
+    await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**
 اوامر القنوات  
@@ -107,7 +107,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="mixthon_source"), 
+                        "رجوع", callback_data="back"), 
                     
                 ]
             ]
@@ -116,14 +116,14 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("adm"))
 async def mixthon_usage(_, callback_query: CallbackQuery):
-    await callback_query.answer(mixthon_source)
+    await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𓏺َِmixthon**
 ★¦ اهلا بك عزيزي في قسم اوامر المجموعة
 /تثبيت لتثبيت رسالة في المجموعة
 /الغاء تثبيت لمسح الرسالة المثبتة
 /وضع صورة بالرد لوضع صورة للمجموعة
-/حذف صورة لحذف الصورة من المجموعة
+`حذف الصورة` لحذف صورة المجموعة
 /وضع وصف لوضع وصف للمجموعة
 
 
@@ -138,7 +138,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="ch"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="mixthon_source"), 
+                        "رجوع", callback_data="back"), 
                     
                 ]
             ]
@@ -146,7 +146,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
     
-@app.on_callback_query(filters.regex("mixthon_source"))
+@app.on_callback_query(filters.regex("back"))
 async def mixthon_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
@@ -188,10 +188,3 @@ async def maker(client: Client, message: Message):
                     ),
                 ],
                 [
-                    InlineKeyboardButton(
-                        "- قناة البوت . ", url=config.SUPPORT_CHAT
-                    ),
-                ],
-            ]
-        ),
-    )
