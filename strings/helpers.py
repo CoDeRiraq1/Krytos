@@ -1,3 +1,4 @@
+#copyrighted mixton Source Channel @mixthon 
 HELP_1 = """~ اليك | اوامر المستخدمين
 
 ~ تشغيل - لتشغيل ملف صوتي في القنوات
