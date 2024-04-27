@@ -1,5 +1,5 @@
 @app.on_message(
-    command(["همسة", همسه", اهمس"])
+    command(["همسة" ,"همسه" ,"اهمس"])
     & filters.group
     & ~filters.edited
 )
