@@ -75,7 +75,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="back"), 
+                        "الرئيسية", callback_data="BACK_BUTTON"), 
                     
                 ]
             ]
@@ -107,7 +107,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="home"), 
+                        "الرئيسية", callback_data="BACK_BUTTON"), 
                     
                 ]
             ]
@@ -138,7 +138,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="ch"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="home"), 
+                        "الرئيسية", callback_data="BACK_BUTTON"), 
                     
                 ]
             ]
@@ -146,7 +146,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
     
-@app.on_callback_query(filters.regex("back"))
+@app.on_callback_query(filters.regex("BACK_BUTTON"))
 async def mixthon_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/2577f47589c4b4c63e4a6.jpg",
