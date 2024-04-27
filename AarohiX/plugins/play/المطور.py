@@ -75,7 +75,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="BACK_BUTTON"), 
+                        "الرئيسية", callback_data="back"), 
                     
                 ]
             ]
@@ -107,7 +107,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="BACK_BUTTON"), 
+                        "الرئيسية", callback_data="back"), 
                     
                 ]
             ]
@@ -138,7 +138,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="ch"), 
                 ],[
                     InlineKeyboardButton(
-                        "الرئيسية", callback_data="BACK_BUTTON"), 
+                        "الرئيسية", callback_data="back"), 
                     
                 ]
             ]
