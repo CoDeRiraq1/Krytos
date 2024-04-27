@@ -84,7 +84,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("ch"))
 async def mixthon_usage(_, callback_query: CallbackQuery):
-    await callback_query.answer()
+    await callback_query.answer(mixthon_source)
     await callback_query.message.edit_text(
         text="""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**
 اوامر القنوات  
@@ -116,7 +116,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
 @app.on_callback_query(filters.regex("adm"))
 async def mixthon_usage(_, callback_query: CallbackQuery):
-    await callback_query.answer()
+    await callback_query.answer(mixthon_source)
     await callback_query.message.edit_text(
         text="""**𓏺َِmixthon**
 ★¦ اهلا بك عزيزي في قسم اوامر المجموعة
