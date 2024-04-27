@@ -7,7 +7,7 @@ from strings.filters import command
 from pyrogram import filters, Client
 from config import OWNER_ID
 
-
+app.on_message(command(["بوت"]))
 
 txt = [
 
@@ -33,5 +33,4 @@ txt = [
             
             
 
-        ]
-app.on_message(command(["بوت"]))
+       ] 
