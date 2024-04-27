@@ -1,5 +1,6 @@
 import asyncio
 import os
+import Message 
 from pyrogram.types import CallbackQuery
 from AarohiX import  (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from AarohiX import app
@@ -12,7 +13,7 @@ from strings.filters import command
 from config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from pyrogram.errors import MessageNotModified
-from mixthon import Message 
+
 
 
 @app.on_message(
