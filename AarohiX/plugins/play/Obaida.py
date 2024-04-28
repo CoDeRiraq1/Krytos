@@ -1,3 +1,4 @@
+"""
 import asyncio
 
 import os
@@ -45,3 +46,4 @@ async def huhh(client: Client, message: Message):
 
 
     )
+"""
