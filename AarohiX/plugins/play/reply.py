@@ -1,3 +1,4 @@
+#copyrighted mixton Source Channel @mixthon
 import asyncio
 
 import random
