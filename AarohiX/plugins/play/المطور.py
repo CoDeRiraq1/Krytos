@@ -115,7 +115,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("adm"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+async def :usage(_, callback_query_mixthon CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𓏺َِmixthon**
