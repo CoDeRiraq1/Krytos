@@ -147,7 +147,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
     
 @app.on_callback_query(filters.regex("back_mixthon"))
-async def mixthon_back(_, callback_query: CallbackQuery):
+async def mixthon_back(_, callback_query_mixthon CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
         caption=f"""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس mixthon \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**""",
