@@ -146,16 +146,16 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
     
-@app.on_callback_query(filters.regex("back_mixthon"))
-async def mixthon_back(_, callback_query_mixthon CallbackQuery):
+@app.on_callback_query(filters.regex("back"))
+async def سبارك_back(_, callback_query: CallbackQuery):
     await message.reply_photo(
-        photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
-        caption=f"""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس mixthon \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**""",
+        photo=f"https://graph.org/file/2577f47589c4b4c63e4a6.jpg",
+        caption=f"""**⩹━★⊷━⌞𓏺َِ᥉َِ᥆َِꪊَِᖇَِᥴُِ꧖ َِ᥉َِρُِꪖَِᖇَِᥴُِƙَِ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس سبارك \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞𓏺َِ᥉َِ᥆َِꪊَِᖇَِᥴُِ꧖ َِ᥉َِρُِꪖَِᖇَِᥴُِƙَِ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "اوامر المجموعة", callback_data="gr"),
+                        "اوامر الجروبات", callback_data="gr"),
                     InlineKeyboardButton(
                         "اوامر القنوات", callback_data="ch"),  
                  ],[
@@ -164,11 +164,42 @@ async def mixthon_back(_, callback_query_mixthon CallbackQuery):
                 ],[
                 
                     InlineKeyboardButton(
-                        "𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯", url=f"https://t.me/mixthon"),
+                        "Source Channel", url=f"https://t.me/mixthon"),
                 ],
 
             ]
 
         ),
+
+    )
+
+@app.on_callback_query(filters.regex("back"))
+async def mixthon_back(_, callback_query: CallbackQuery):
+    await message.reply_photo(
+        photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
+        caption=f"""**𝐌𝐢𝐱𝐓𝐡𝐨𝐧**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس  ميكسثون \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★ 𝐌𝐮𝐬𝐢𝐜 𝐮𝐬𝐄𝐫 𝐛𝐨𝐭 **""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "اوامر الكروبات", callback_data="gr"),
+                    InlineKeyboardButton(
+                        "اوامر القنوات", callback_data="ch"),  
+                 ],[
+                    InlineKeyboardButton(
+                        "اوامر الادمن", callback_data="adm"), 
+                ],[
+                
+                    InlineKeyboardButton(
+                        "Source Channel", url=f"https://t.me/MIXTHON"),
+                ],
+
+            ]
+
+        ),
+
+    )
+
+
 
     )
