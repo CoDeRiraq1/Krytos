@@ -46,7 +46,7 @@ txt = [
         
 
 
-@app.on_message(command(["كتبات","حكمه"]))
+@app.on_message(command(["بوت"]))
 
 async def ktbat(client: Client, message: Message):
 
