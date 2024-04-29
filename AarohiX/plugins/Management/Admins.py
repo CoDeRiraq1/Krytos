@@ -147,7 +147,7 @@ async def unmute_user(user_id, first_name, admin_id, admin_name, chat_id):
     
 
 
-@app.on_message(filters.command(["ban"]["/", "!", "."]))
+@app.on_message(filters.command(["ban"]
 async def ban_command_handler(client, message):
     chat = message.chat
     chat_id = chat.id
@@ -243,7 +243,7 @@ async def unban_command_handler(client, message):
 
 
 
-@app.on_message(filters.command(["mute"]["/", "!", "."]))
+@app.on_message(filters.command(["mute"]
 async def mute_command_handler(client, message):
     chat = message.chat
     chat_id = chat.id
@@ -298,7 +298,7 @@ async def mute_command_handler(client, message):
         await message.reply_text(msg_text)
 
 
-@app.on_message(filters.command(["unmute"]["/", "!", "."]))
+@app.on_message(filters.command(["unmute"]
 async def unmute_command_handler(client, message):
     chat = message.chat
     chat_id = chat.id
@@ -341,7 +341,7 @@ async def unmute_command_handler(client, message):
 
 
 
-@app.on_message(filters.command(["tmute"]["/", "!", "."]))
+@app.on_message(filters.command(["tmute"]
 async def tmute_command_handler(client, message):
     chat = message.chat
     chat_id = chat.id
