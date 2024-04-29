@@ -3714,7 +3714,7 @@ async def cutt(client: Client, message: Message):
         
 iddof = []
 @app.on_message(
-    command(["قفل كت","تعطيل تويت"])
+    command(["قفل كت" ,"تعطيل تويت"])
     & filters.group
     & ~filters.edited
 )
@@ -3729,7 +3729,7 @@ async def iddlock(client, message):
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
 @app.on_message(
-    command(["تعطيل كت", "قفل كت"])
+    command(["تعطيل كت" ,"قفل كت"])
     & filters.group
     & ~filters.edited
 )
