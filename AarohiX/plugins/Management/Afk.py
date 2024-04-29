@@ -10,7 +10,7 @@ from AarohiX.utils.Databases.afkdb import add_afk, is_afk, remove_afk
 
 
 
-@app.on_message(command(["afk"],
+@app.on_message(command(["afk"])) 
 async def active_afk(_, message: Message):
     if message.sender_chat:
         return
