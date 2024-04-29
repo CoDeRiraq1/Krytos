@@ -115,7 +115,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("adm"))
-async def :usage(_, callback_query_mixthon CallbackQuery):
+async def :usage_mixthon(_, callback_query_mixthon CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𓏺َِmixthon**
@@ -155,7 +155,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "اوامر الجروبات", callback_data="gr"),
+                        "اوامر الكروبات", callback_data="gr"),
                     InlineKeyboardButton(
                         "اوامر القنوات", callback_data="ch"),  
                  ],[
