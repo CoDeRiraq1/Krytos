@@ -5,7 +5,7 @@ from AarohiX import app
 
 random_user_api_url = 'https://randomuser.me/api/'
 
-@app.on_message(filters.command("fake")
+@app.on_message(filters.command("fake"))) 
 def generate_fake_user_by_country(client, message):
     country_name = message.text.split("/fake ", maxsplit=1)[1]
     
