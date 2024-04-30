@@ -17,7 +17,7 @@ from random import  choice, randint
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"{YOUTUBE_IMG_URL}",
+        photo=f"https://telegra.ph/file/b5ec4a67379667d56cd66.jpg",
         caption=f"""
   - 𓏺[𝙎𝙊𝙐𝙍𝘾𝙀 𝐌𝐢𝐱𝐭𝐡𝐨𝐧](https://t.me/mixthon) 
 —————————————
