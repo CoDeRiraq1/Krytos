@@ -43,7 +43,7 @@ async def huhh(client: Client, message: Message):
     )
 
 @app.on_message(
-    command(["،", ".",])
+    command(["،" ,"."])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
@@ -75,7 +75,7 @@ async def huhh(client: Client, message: Message):
 
 
     @app.on_message(
-    command(["همسه" ,"همسة" ,"اهمس"])
+    command(["همسه", "همسة", "اهمس"])
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
