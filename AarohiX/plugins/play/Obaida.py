@@ -42,66 +42,7 @@ async def huhh(client: Client, message: Message):
 
     )
 
-@app.on_message(
-    command(["،" ,"."])
 )
-async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
-        caption=f"""
-  - 𓏺[𝙎𝙊𝙐𝙍𝘾𝙀 𝐌𝐢𝐱𝐭𝐡𝐨𝐧](https://t.me/mixthon) 
-—————————————
--   [تمويل قنوات ](https://t.me/M20hBot) 
-
--  [𝙨𝙤𝙪𝙧𝙘𝙚 𝙙𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](https://t.me/AA37A) 
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        " أبو عُبَيْدَةْ ", url=f"https://t.me/AA37A"), 
-                ],[
-                    InlineKeyboardButton(
-                        "𝐌𝐢𝐱𝐭𝐡𝐢𝐧 𝐂𝐌𝐃 𝐒𝐎𝐔𝐑𝐂𝐄", url=f"t.me/Mixthon"),
-                ],
-
-            ]
-
-        ),
-
-    )
-
-
-
-
-    @app.on_message(
-    command(["همسه", "همسة", "اهمس"])
-)
-async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://graph.org/file/de6d5f27cbab3670325aa.jpg",
-        caption=f"""
-  - 𓏺[𝙎𝙊𝙐𝙍𝘾𝙀 𝐌𝐢𝐱𝐭𝐡𝐨𝐧](https://t.me/mixthon) 
-—————————————
--   [𝙗𝙤𝙩 𝙘𝙝𝙖𝙩 ](https://t.me/Mixthon) 
-
--  [كيف اهمس ؟ ](https://t.me/mixthon/17) 
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        " بوت الهمسة ", url=f"https://t.me/billiesonbot"), 
-                ],[
-                    InlineKeyboardButton(
-                        "𝐌𝐢𝐱𝐭𝐡𝐢𝐧 𝐂𝐌𝐃 𝐒𝐎𝐔𝐑𝐂𝐄", url=f"t.me/Mixthon"),
-                ],
-
-            ]
-
-        ),
-
-    )
 
 
 
