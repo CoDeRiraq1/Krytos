@@ -1,8 +1,9 @@
 import asyncio
 import os
+import pytgcalls 
+
 from datetime import datetime, timedelta
 from typing import Union
-from StreamType import pytgcalls
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, StreamType
