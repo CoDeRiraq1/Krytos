@@ -5,16 +5,16 @@ from typing import Union
 
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
-from py-tgcalls import Py-TgCalls, StreamType
-from py-tgcalls.exceptions import (
+from pytgcalls import PyTgCalls, StreamType
+from pytgcalls.exceptions import (
     AlreadyJoinedError,
     NoActiveGroupCall,
     TelegramServerError,
 )
-from py-tgcalls.types import Update
-from py-tgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from py-tgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
-from py-tgcalls.types.stream import StreamAudioEnded
+from pytgcalls.types import Update
+from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
+from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
+from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from AarohiX import LOGGER, YouTube, app
