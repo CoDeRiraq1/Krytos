@@ -5,6 +5,13 @@ from typing import Union
 
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
+from pytgcalls import PyTgCalls, StreamType
+from pytgcalls.exceptions import (
+    AlreadyJoinedError,
+    NoActiveGroupCall,
+    TelegramServerError,
+	update pytgcalls,
+)
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
@@ -550,7 +557,7 @@ class Call(PyTgCalls):
         return str(round(sum(pings) / len(pings), 3))
 
     async def start(self):
-        LOGGER(__name__).info("Starting PyTgCalls Client...\n")
+        LOGGER(__name__).info(" جاري تشغيل البوت \n")
         if config.STRING1:
             await self.one.start()
         if config.STRING2:
@@ -592,4 +599,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-AarohiX = Call()
+Dil = Call()
