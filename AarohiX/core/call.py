@@ -10,7 +10,6 @@ from pytgcalls.exceptions import (
     AlreadyJoinedError,
     NoActiveGroupCall,
     TelegramServerError,
-	update pytgcalls,
 )
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
@@ -557,7 +556,7 @@ class Call(PyTgCalls):
         return str(round(sum(pings) / len(pings), 3))
 
     async def start(self):
-        LOGGER(__name__).info(" جاري تشغيل البوت \n")
+        LOGGER(__name__).info("Starting PyTgCalls Client...\n")
         if config.STRING1:
             await self.one.start()
         if config.STRING2:
