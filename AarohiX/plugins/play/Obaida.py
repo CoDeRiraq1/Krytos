@@ -38,5 +38,3 @@ async def huhh(client: Client, message: Message):
             ]
 
         ),
-
-    ) 
