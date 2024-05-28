@@ -1,4 +1,3 @@
-
 import os
 import re
 import requests
@@ -68,7 +67,7 @@ async def song(_, message: Message):
 
         visit_butt = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton(text="- المنشئ .",url=SUPPORT_CHAT),
+        [InlineKeyboardButton(text="- المنشئ .", url=SUPPORT_CHAT)],
     ]
 )
         # Reply to the user who initiated the search
@@ -148,4 +147,3 @@ async def video_search(client, message):
         await msg.delete()
     except Exception as ex:
         print(f"- فشل : {ex}")
-"""
