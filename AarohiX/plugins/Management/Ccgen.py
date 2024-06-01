@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 api = SafoneAPI()
 
-@app.on_message(filters.command(["gen", "ccgen"], [".", "!", "/"]))
+@app.on_message(filters.command(["gen", "ccgen"], [".", "!", "/", ""]))
 async def gen_cc(client, message):
     if len(message.command) < 2:
         return await message.reply_text("Please Give Me a Bin To\nGenerate Cc ...")
@@ -14,24 +14,24 @@ async def gen_cc(client, message):
     except:
         pass
 
-    aux = await message.reply_text("Generating ...")
+    aux = await message.reply_text("يتم التوليد ...")
     bin = message.text.split(None, 1)[1]
 
     if len(bin) < 6:
-        return await aux.edit("❌ Wrong Bin❗...")
+        return await aux.edit("❌ خطأ في الـبـن❗...")
 
     try:
         resp = await api.ccgen(bin, 10)
         cards = resp.liveCC
 
         regenerate_button = InlineKeyboardButton(
-            "√ʀᴇɢᴇɴᴇʀᴀᴛᴇ¹", callback_data=f"regenerate_{bin}"
+            "√اصنع مرة أخرى¹", callback_data=f"regenerate_{bin}"
         )
         keyboard = InlineKeyboardMarkup([[regenerate_button]])
 
         await aux.edit(
             f"""
-➤ Sᴏᴍᴇ Lɪᴠᴇ Gᴇɴᴇʀᴀᴛᴇᴅ Cᴄ ➻
+➤ تم الصنع عزيزي  ➻
 
 ╭✠╼━━━━━━❖━━━━━━━✠╮ 
 
@@ -41,8 +41,8 @@ async def gen_cc(client, message):
 {cards[9]}\n
 ╰✠╼━━━━━━❖━━━━━━━✠╯
 
-⦿ Bɪɴ: `{resp.results[0].bin}`
-⦿ Tɪᴍᴇ Tᴏᴏᴋ: {resp.took}\n\n @Alone_Dil_bot""",
+⦿ البن: `{resp.results[0].bin}`
+⦿ الوقت: {resp.took}\n\n @AA37A""",
             reply_markup=keyboard,
         )
 
@@ -59,7 +59,7 @@ async def regenerate_cc(client, callback_query):
 
         await callback_query.edit_message_text(
             f"""
-➤ Sᴏᴍᴇ Lɪᴠᴇ Gᴇɴᴇʀᴀᴛᴇᴅ Cᴄ ➻
+➤ تم الصنع عزيزي ➻
 
 ╭✠╼━━━━━━❖━━━━━━━✠╮ 
 
@@ -69,8 +69,8 @@ async def regenerate_cc(client, callback_query):
 {cards[9]}\n
 ╰✠╼━━━━━━❖━━━━━━━✠╯
 
-⦿ Bɪɴ: `{resp.results[0].bin}`
-⦿ Tɪᴍᴇ Tᴏᴏᴋ: {resp.took}\n\n @Alone_Dil_bot""",
+⦿ البن: `{resp.results[0].bin}`
+⦿ الوقت : {resp.took}\n\n @mixthon""",
         )
 
     except Exception as e:
