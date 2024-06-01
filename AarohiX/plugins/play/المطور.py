@@ -46,7 +46,7 @@ async def mixthon(client: Client, message: Message):
 
     
 @app.on_callback_query(filters.regex("gr"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+async def mixthon(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**
@@ -83,7 +83,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("ch"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+async def mixthon(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𝐌𝐈𝐗𝐓𝐇𝐎𝐍 𝐂𝐌𝐃 ⌯**
@@ -115,7 +115,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("adm"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+async def mixthon(_, callback_query: CallbackQuery):
     await callback_query.answer()
     await callback_query.message.edit_text(
         text="""**𓏺َِmixthon**
@@ -147,7 +147,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
     
 @app.on_callback_query(filters.regex("mixthon"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+async def mixthon(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
         caption=f"""**⩹━★⊷━mixthon**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس  ميكسثون \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★⊷━⌞𓏺َِ᥉َِ᥆َِꪊَِᖇَِᥴُِ꧖ َِ᥉َِρُِꪖَِᖇَِᥴُِƙَِ⌝⌯⊶★━⩺ ⌝━⊶★━⩺**""",
@@ -173,8 +173,8 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
 
     )
 
-@app.on_callback_query(filters.regex("back"))
-async def mixthon_usage(_, callback_query: CallbackQuery):
+@app.on_callback_query(filters.regex("mixthon"))
+async def mixthon(_, callback_query: CallbackQuery):
     await message.reply_photo(
         photo=f"https://graph.org/file/7308dda897f0cda0eafa3.jpg",
         caption=f"""**𝐌𝐢𝐱𝐓𝐡𝐨𝐧**\nمرحبا بك عزيزي {message.from_user.mention}\nهذا قسم الاوامر الخاص بسورس  ميكسثون \nلمعرفة الاوامر اضغط على الأزرار بالأسفل👇\n**⩹━★ 𝐌𝐮𝐬𝐢𝐜 𝐮𝐬𝐄𝐫 𝐛𝐨𝐭 **""",
