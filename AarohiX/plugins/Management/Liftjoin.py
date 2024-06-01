@@ -29,17 +29,16 @@ async def member_has_joined(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"⦿ ᴄʟɪᴄᴋ ᴍᴇ ⦿",
+                    f"⦿ {user.first_name}  ⦿",
                     url=url
                 )
             ]
         ])
 
         caption = (
-            f"🎉 ᴡᴇʟᴄᴏᴍᴇ {user.mention}! 🌟\n\n"
-            f"✨ ɪᴛ's ᴀ ᴘʟᴇᴀsᴜʀᴇ ᴛᴏ ʜᴀᴠᴇ ʏᴏᴜ ᴡɪᴛʜ ᴜs! "
-            f"ғᴇᴇʟ ғʀᴇᴇ ᴛᴏ sʜᴀʀᴇ ᴜʀ ᴛʜᴏᴜɢʜᴛs ᴀɴᴅ ᴇɴᴊᴏʏ ᴛʜᴇ ᴄᴏᴍᴍᴜɴɪᴛʏ ᴠɪʙᴇs.\n\n"
-            f"📅 ᴊᴏɪɴ ᴅᴀᴛᴇ : {get_formatted_datetime()}"
+            f"❤️ {user.mention}! 👏\n\n"
+            f"✨ لا يكن حبك كلفاً ولا بغضُك تلفًا! "
+            f"time : {get_formatted_datetime()}"
         )
         
         await client.send_photo(
@@ -71,21 +70,21 @@ async def member_has_left(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"⦿ ɪɴғᴏ ⦿",
+                    f"⦿ {user.first_name} ⦿",
                     url=url
                 )
             ]
         ])
 
         caption = (
-            f"😢 ɢᴏᴏᴅʙʏᴇ {user.mention}!** 😔\n\n"
-            f"🌈 ᴡᴇ'ʟʟ ᴍɪss ʏᴏᴜ! ɪᴅ ʏᴏᴜ ᴇᴠᴇʀ ᴅᴇᴄɪᴅᴇ ᴛᴏ ʀᴇᴛᴜʀɴ, ᴏᴜʀ ᴅᴏᴏʀs ᴀʀᴇ ᴀʟᴡᴀʏs ᴏᴘᴇɴ.\n\n"
-            f"📅 ʟᴇғᴛ ᴅᴀᴛᴇ : {get_formatted_datetime()}"
+            f"وداعاً {user.mention}!** 👏\n\n"
+            f"أَعُوْد إِلَيْكْ فَلَا تَفْتَح البَاب افْتَح يَدَيكْ.\n\n"
+            f"Time lift : {get_formatted_datetime()}"
         )
 
         await client.send_animation(
             chat_id=member.chat.id,
-            animation="https://telegra.ph/file/d28047520fad932521368.mp4",
+            animation="https://telegra.ph/file/70d9f80768c86b8484d6f.mp4",
             caption=caption,
             reply_markup=user_button,
         )
