@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from ZeMusic import app
+from AarohiX import app
 
 @app.on_message(filters.command(["الرابط","ر"], "") & filters.group & ~filters.private)
 async def invitelink(client, message):
