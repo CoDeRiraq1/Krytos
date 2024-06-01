@@ -16,7 +16,7 @@ command("اوامري")
 )
 @app.on_callback_query(filters.regex("obidaback"))
 async def obidaback(_, query: CallbackQuery):
-   await query.edit_message_text(
+   await query.send_message_text(
        f"""<b>» مرحبـاً بك عـزيـزي </b> .\n\n<b>» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
