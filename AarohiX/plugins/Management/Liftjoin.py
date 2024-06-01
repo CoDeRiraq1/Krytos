@@ -29,7 +29,7 @@ async def member_has_joined(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"⦿ {user.first_name}  ⦿",
+                    f"❤️ {user.first_name} 👏",
                     url=url
                 )
             ]
@@ -37,7 +37,7 @@ async def member_has_joined(client: bot, member: ChatMemberUpdated):
 
         caption = (
             f"❤️ {user.mention}! 👏\n\n"
-            f"✨ لا يكن حبك كلفاً ولا بغضُك تلفًا! "
+            f"✨ لا يكن حبك كلفاً ولا بغضُك تلفًا!\n "
             f"time : {get_formatted_datetime()}"
         )
         
@@ -70,7 +70,7 @@ async def member_has_left(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"⦿ {user.first_name} ⦿",
+                    f"👏 {user.first_name} ❤️",
                     url=url
                 )
             ]
