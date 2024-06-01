@@ -75,7 +75,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                     
                 ],[
                     InlineKeyboardButton(
-                        "رجوع", callback_data="back"), 
+                        "رجوع", callback_data="mixthonback"), 
                     
                 ]
             ]
@@ -107,7 +107,7 @@ async def mixthon_usage(_, callback_query: CallbackQuery):
                         "العودة", callback_data="gr"), 
                 ],[
                     InlineKeyboardButton(
-                        "رجوع", callback_data="back"), 
+                        "رجوع", callback_data="mixthonback"), 
                     
                 ]
             ]
