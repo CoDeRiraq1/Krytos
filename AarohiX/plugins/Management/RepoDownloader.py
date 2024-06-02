@@ -4,7 +4,7 @@ import shutil
 import os
 from AarohiX import app
 
-@app.on_message(filters.command(["gitdl"]))
+@app.on_message(filters.command(["fork"]))
 def download_repo(_, message):
     if len(message.command) != 2:
         message.reply_text("Please provide the GitHub repository URL after the command. Example: /downloadrepo Repo Url ")
