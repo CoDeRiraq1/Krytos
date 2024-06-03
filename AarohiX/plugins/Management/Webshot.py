@@ -59,10 +59,10 @@ async def eor(msg: Message, **kwargs):
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 
-@app.on_message(filters.command(["webss", "ss", "webshot"]))
+@app.on_message(filters.command(["webss", "ss", "webshot", "سكرين"]))
 async def take_ss(_, message: Message):
     if len(message.command) < 2:
-        return await eor(message, text="**ɢɪᴠᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ.**")
+        return await eor(message, text="** اعطيني رابط اي موقع لـ التقط صورة \n <b>- `/ss  + رابط ` : </b>.**")
 
     if len(message.command) == 2:
         url = message.text.split(None, 1)[1]
@@ -78,14 +78,14 @@ async def take_ss(_, message: Message):
     else:
         return await eor(message, text="**ɪɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ.**")
 
-    m = await eor(message, text="**ᴄᴀᴘᴛᴜʀɪɴɢ sᴄʀᴇᴇɴsʜᴏᴛ...**")
+    m = await eor(message, text="**يتم الأتقاط ...**")
 
     try:
         photo = await take_screenshot(url, full)
         if not photo:
-            return await m.edit("**ғᴀɪʟᴇᴅ ᴛᴏ ᴛᴀᴋᴇ sᴄʀᴇᴇɴsʜᴏᴛ.**")
+            return await m.edit("**فشل حدث خطأ في التقاط الصورة.**")
 
-        m = await m.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ...**")
+        m = await m.edit("**يتم الرفع...**")
 
         if not full:
             await message.reply_photo(photo, reply_markup=button)
