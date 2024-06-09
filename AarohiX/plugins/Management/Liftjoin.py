@@ -29,14 +29,14 @@ async def member_has_joined(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"❤️ {user.first_name} 👏",
+                    f"{user.first_name} 👏",
                     url=url
                 )
             ]
         ])
 
         caption = (
-            f"❤️ {user.mention}! 👏\n\n"
+            f" {user.mention}! 👏\n\n"
             f"✨ لا يكن حبك كلفاً ولا بغضُك تلفًا!\n "
             f"time : {get_formatted_datetime()}"
         )
@@ -70,7 +70,7 @@ async def member_has_left(client: bot, member: ChatMemberUpdated):
         user_button = InlineKeyboardMarkup([
             [
                 InlineKeyboardButton(
-                    f"👏 {user.first_name} ❤️",
+                    f" {user.first_name} ",
                     url=url
                 )
             ]
@@ -78,13 +78,13 @@ async def member_has_left(client: bot, member: ChatMemberUpdated):
 
         caption = (
             f"وداعاً {user.mention}!** 👏\n\n"
-            f"أَعُوْد إِلَيْكْ فَلَا تَفْتَح البَاب افْتَح يَدَيكْ.\n\n"
+            f"<b> غادر المجموعة </b> {user.first_name} \n\n"
             f"Time lift : {get_formatted_datetime()}"
         )
 
         await client.send_animation(
             chat_id=member.chat.id,
-            animation="https://telegra.ph/file/70d9f80768c86b8484d6f.mp4",
+            animation="https://telegra.ph/file/79aadfb1e5eefd634132b.jpg",
             caption=caption,
             reply_markup=user_button,
         )
