@@ -36,14 +36,14 @@ async def member_has_joined(client: bot, member: ChatMemberUpdated):
         ])
 
         caption = (
-            f" {user.mention}! 👏\n\n"
-            f"✨ لا يكن حبك كلفاً ولا بغضُك تلفًا!\n "
-            f"time : {get_formatted_datetime()}"
+            f" {user.mention}! اهلا بالحلو 👏\n\n"
+            f"✨  {user.first_name !\n "
+            f"الوقت : {get_formatted_datetime()}"
         )
         
         await client.send_photo(
             chat_id=member.chat.id,
-            photo="https://graph.org/file/6f913de8bd1fc44d2d7f2.jpg",
+            photo="https://graph.org/file/0e617473a676863c2651c.jpg",
             caption=caption,
             reply_markup=user_button,
         )
@@ -84,7 +84,7 @@ async def member_has_left(client: bot, member: ChatMemberUpdated):
 
         await client.send_animation(
             chat_id=member.chat.id,
-            animation="https://telegra.ph/file/79aadfb1e5eefd634132b.jpg",
+            animation=""https://graph.org/file/335f3d5e60cddcfc8356a.mp4,
             caption=caption,
             reply_markup=user_button,
         )
